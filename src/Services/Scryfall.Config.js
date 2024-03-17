@@ -6,11 +6,12 @@ const searchParameters = {
     keywords: ['flying'],
     rarity: 'rare',
     set: 'iko', // Ejemplo: Ikoria
+    notColors: [],
 
     // ...otros parámetros según la documentación de Scryfall
 };
 
-function generateSearchUrl(params) {
+export const generateSearchUrl = (params) => {
     const baseUrl = 'https://api.scryfall.com/cards/search?q=';
     let queryParts = [];
 
@@ -74,5 +75,6 @@ function generateSearchUrl(params) {
     });
 
     const fullQuery = queryParts.join('+');
+    console.log(`${baseUrl}${fullQuery}`);
     return `${baseUrl}${fullQuery}`;
-}
+};
