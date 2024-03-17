@@ -1,7 +1,11 @@
 import { mtgApi } from './Mtg.Config.js';
 
-export const getAll = async (params) => {
-    const response = await mtgApi.get('/cards');
+export const getAlSets = async () => {
+    const response = await mtgApi.get('/sets');
+    return response;
+};
+export const getSetByCode = async (string) => {
+    const response = await mtgApi.get(`/sets/${string}`);
     return response;
 };
 
