@@ -1,0 +1,91 @@
+h4 {
+    margin: 6px;
+}
+:root {
+    --dark-green: #1f1d2b;
+    --deep-purple: #3d315d;
+    --brown: #5f2677;
+    --blue-gray: #4a7383;
+    --gold: #bb3c99;
+    --pale-pink: #cac8d5;
+
+    --background: var(--dark-green);
+    --text: var(--pale-pink);
+    --accent: var(--gold);
+    --secondary: var(--brown);
+    --link: var(--blue-gray);
+    --border: var(--deep-purple);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    margin: 0px 5px;
+    border-radius: 5px;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+input,
+textarea {
+    background-color: var(--text);
+    color: var(--background);
+    border: none;
+    padding: 10px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid var(--accent);
+}
+
+/* Personalización para navegadores basados en Chromium y Opera */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: var(
+        --background
+    ); /* Color de fondo de la pista de la barra de desplazamiento */
+    border-radius: 10px; /* Esquinas redondeadas para la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(
+        --secondary
+    ); /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Esquinas redondeadas para la barra de desplazamiento */
+    border: 3px solid var(--background); /* Borde y espacio adicional en la pista, asegurando el efecto redondeado */
+}
+
+/* Para personalizar la barra de desplazamiento en Firefox */
+* {
+    scrollbar-width: thin; /* "auto" o "thin" */
+    scrollbar-color: var(--secondary) var(--background); /* Color de la barra y color de la pista */
+}

@@ -31,6 +31,7 @@ export const generateSearchUrl = (params) => {
 
     // Incorporando múltiples parámetros basados en la documentación
     const parameterHandlers = {
+        name: (value) => value,
         colors: (value) => `c%3A${value}`,
         notColors: (value) => `-c%3A${value}`,
         colorIdentity: (value) => `id%3A${value}`,
@@ -62,13 +63,15 @@ export const generateSearchUrl = (params) => {
 
     Object.entries(params).forEach(([key, value]) => {
         if (parameterHandlers[key] && key !== 'or') {
-            if (Array.isArray(value) && params.or && params.or.includes(key)) {
-                let joinedOrvalue = value.join('+or+');
-                queryParts.push(parameterHandlers[key](joinedOrvalue));
-            } else if (Array.isArray(value)) {
-                let joinedvalue = value.join('');
-                queryParts.push(parameterHandlers[key](joinedvalue));
-            } else {
+            if (Array.isArray(value) && value.length > 0) {
+                if (params.or && params.or.includes(key)) {
+                    let joinedOrvalue = value.join('+or+');
+                    queryParts.push(parameterHandlers[key](joinedOrvalue));
+                } else {
+                    let joinedValue = value.join('');
+                    queryParts.push(parameterHandlers[key](joinedValue));
+                }
+            } else if (typeof value === 'string' && value.trim() !== '') {
                 queryParts.push(parameterHandlers[key](value));
             }
         }

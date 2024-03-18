@@ -6,7 +6,10 @@ function ImageCapture({ children }) {
     const containerRef = useRef(null);
 
     const handleCapture = () => {
-        html2canvas(containerRef.current).then((canvas) => {
+        html2canvas(containerRef.current, {
+            backgroundColor: 'black', // Establecer el fondo negro
+            scale: 3,
+        }).then((canvas) => {
             // Crear un enlace para descargar la imagen
             const link = document.createElement('a');
             link.download = 'captured_image.png';
@@ -17,13 +20,8 @@ function ImageCapture({ children }) {
 
     return (
         <CapturerDiv>
-            <div
-                ref={containerRef}
-                style={{ padding: '10px', background: 'var(--background)' }}
-            >
-                {children}
-            </div>
-            <button onClick={handleCapture}>Capturar imagen</button>
+            <div ref={containerRef}>{children}</div>
+            <Button onClick={handleCapture}>Descargar Proxy</Button>
         </CapturerDiv>
     );
 }
@@ -35,4 +33,9 @@ const CapturerDiv = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+`;
+
+const Button = styled.button`
+    margin-top: 20px;
+    border-radius: 20px;
 `;
