@@ -50,6 +50,7 @@ const CardContainer = styled.div`
 `;
 
 const CardImage = styled.img`
+    border-radius: 10px;
     width: 200px;
     height: auto;
     cursor: pointer;
@@ -58,7 +59,8 @@ const CardImage = styled.img`
 const Button = styled.div`
     user-select: none;
     width: 30px;
-    background-color: floralwhite;
+    background-color: var(--accent);
+    color: var(--background);
     cursor: pointer;
     display: flex;
     align-items: center;

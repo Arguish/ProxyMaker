@@ -21,7 +21,6 @@ const BaseCard = ({ children, img, data }) => {
     const [averageColor, setAverageColor] = useState('#999999');
 
     useEffect(() => {
-        console.log(data.length);
         if (!data) {
             getAverageColor(img, (color) => {
                 setAverageColor(color);

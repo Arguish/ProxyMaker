@@ -53,7 +53,7 @@ const ScrollDiv = styled.div`
     justify-content: center;
     text-align: center;
     width: 30%;
-    overflow: hidden;
+    overflow: scroll;
     height: 90vh;
 `;
 

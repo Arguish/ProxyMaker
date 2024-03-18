@@ -5,6 +5,9 @@ import DynamicFontSizeParagraph from './DynamicFontSizeParagraph';
 import TextWithSymbols from './TextWithSymbols';
 
 const Normal = ({ img, data, customName }) => {
+    if (!data) {
+        return;
+    }
     const [isPlaneswalker, setIsPlaneswalker] = useState(false);
     const [abilityText, setAbilityText] = useState([]);
 
@@ -154,12 +157,16 @@ const AbilityValue = styled.div`
 `;
 
 const Force = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     bottom: 5px;
     right: 5px;
     border: 2px solid black;
     background-color: white;
-    padding: 2px 5px;
+    color: black;
+    padding: 1px 5px;
     z-index: 100;
     border-radius: 5px;
     font-weight: 700;
@@ -171,6 +178,7 @@ const Loyalty = styled.div`
     right: 5px;
     border: 2px solid black;
     background-color: white;
+    color: black;
     padding: 2px 5px;
     z-index: 100;
     border-radius: 0px 0px 20px 20px;
