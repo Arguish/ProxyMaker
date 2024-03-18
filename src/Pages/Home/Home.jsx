@@ -12,7 +12,11 @@ function Home() {
 
     return (
         <AppDiv>
-            <Header>Proxy Maker</Header>
+            <HeaderDiv>
+                <br />
+                <Header>Proxy Maker</Header>
+                <h6>v.(Alpha 0.1)</h6>
+            </HeaderDiv>
             <HomeDiv>
                 <CardSearch
                     selectCallback={setSelectedCard}
@@ -40,9 +44,16 @@ const AppDiv = styled.div`
     padding: 0;
 `;
 
+const HeaderDiv = styled.div`
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`;
+
 const Header = styled.h1`
     margin: 0;
-    height: 7vh;
     color: var(--accent);
 `;
 

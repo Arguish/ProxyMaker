@@ -48,7 +48,11 @@ const TextWithSymbols = ({ text, svgSize }) => {
                             />
                         );
                     }
-                    return <TextSpan key={index}>{src}</TextSpan>;
+                    return (
+                        <TextSpan style={{ fontSize: svgSize }} key={index}>
+                            {src}
+                        </TextSpan>
+                    );
                 })
             );
         });

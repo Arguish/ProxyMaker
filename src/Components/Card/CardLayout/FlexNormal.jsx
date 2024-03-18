@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import BaseCard from '../BaseCard';
 import styled from 'styled-components';
 import DynamicFontSizeParagraph from './DynamicFontSizeParagraph';
 import TextWithSymbols from './TextWithSymbols';
 
-const Normal = ({ img, data, customName }) => {
+const FlexNormal = ({ img, data, customName }) => {
     if (!data) {
         return;
     }
@@ -46,11 +45,11 @@ const Normal = ({ img, data, customName }) => {
     };
 
     return (
-        <BaseCard img={img} data={data.colors}>
+        <>
             <Card style={{ backgroundImage: `url(${img})` }}>
                 <Header>
                     <ManaCost>
-                        <TextWithSymbols text={data.mana_cost} svgSize={15} />
+                        <TextWithSymbols text={data.mana_cost} svgSize={8} />
                     </ManaCost>
                     <TitleDiv>
                         <Title>{customName || data.name}</Title>
@@ -78,24 +77,26 @@ const Normal = ({ img, data, customName }) => {
                     ))}
                 </SpecialComponent>
             </Card>
-        </BaseCard>
+        </>
     );
 };
 
-export default Normal;
+export default FlexNormal;
 
 const Card = styled.div`
     border: 2px solid black;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
     border-radius: 10px;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    position: relative;
     gap: 10px;
     user-select: text;
     background-size: cover;
     background-position: center;
+    font-size: 10px;
 `;
 
 const Header = styled.div`
@@ -119,7 +120,6 @@ const Title = styled.h3`
     color: white;
     padding: 5px;
     border-radius: 5px;
-    font-size: 14px;
     font-weight: 700;
 `;
 
@@ -188,10 +188,6 @@ const Loyalty = styled.div`
 `;
 
 const SpecialComponent = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background-color: rgba(0, 0, 0, 0.65);
     color: white;
     padding: 7px;
