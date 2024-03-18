@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const Case = () => {
-    return <div>Case</div>;
+    return <Colabora />;
 };
 
 export default Case;

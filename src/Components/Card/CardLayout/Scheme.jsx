@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const Scheme = () => {
-    return <div>Scheme</div>;
+    return <Colabora />;
 };
 
 export default Scheme;

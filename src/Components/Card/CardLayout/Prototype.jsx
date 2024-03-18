@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const Prototype = () => {
-    return <div>Prototype</div>;
+    return <Colabora />;
 };
 
 export default Prototype;

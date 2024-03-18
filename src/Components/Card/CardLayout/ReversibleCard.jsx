@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const ReversibleCard = () => {
-    return <div>ReversibleCard</div>;
+    return <Colabora />;
 };
 
 export default ReversibleCard;

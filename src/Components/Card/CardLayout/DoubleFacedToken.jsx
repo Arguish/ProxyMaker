@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const DoubleFacedToken = () => {
-    return <div>DoubleFacedToken</div>;
+    return <Colabora />;
 };
 
 export default DoubleFacedToken;

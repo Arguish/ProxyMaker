@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const Planar = () => {
-    return <div>Planar</div>;
+    return <Colabora />;
 };
 
 export default Planar;

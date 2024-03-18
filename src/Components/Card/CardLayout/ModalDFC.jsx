@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
-const ModalDFC = () => {
-    return <div>ModalDFC</div>;
+const ModalDfc = () => {
+    return <Colabora />;
 };
 
-export default ModalDFC;
+export default ModalDfc;

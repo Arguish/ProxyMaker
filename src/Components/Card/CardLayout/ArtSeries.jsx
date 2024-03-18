@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const ArtSeries = () => {
-    return <div>ArtSeries</div>;
+    return <Colabora />;
 };
 
 export default ArtSeries;

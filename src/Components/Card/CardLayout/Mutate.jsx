@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const Mutate = () => {
-    return <div>Mutate</div>;
+    return <Colabora />;
 };
 
 export default Mutate;

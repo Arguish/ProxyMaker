@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const Token = () => {
-    return <div>Token</div>;
+    return <Colabora />;
 };
 
 export default Token;

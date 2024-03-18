@@ -1,7 +1,8 @@
 import React from 'react';
+import Colabora from '../../Colabora/Colabora';
 
 const Meld = () => {
-    return <div>Meld</div>;
+    return <Colabora />;
 };
 
 export default Meld;
