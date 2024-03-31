@@ -81,6 +81,7 @@ const CardSearch = ({ selectCallback, actionCallback }) => {
                         onChange={handleInputChange}
                     />
                 </label>
+                {/* 
                 <label>
                     manaCoste:
                     <input
@@ -136,7 +137,7 @@ const CardSearch = ({ selectCallback, actionCallback }) => {
                             </label>
                         ))}
                     </CheckboxGroup>
-                </label>
+                </label> */}
             </SearchForm>
             {searchResult && searchResult.length > 0 && (
                 <ImageContainer>
