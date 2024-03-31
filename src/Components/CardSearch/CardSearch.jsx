@@ -82,7 +82,7 @@ const CardSearch = ({ selectCallback, actionCallback }) => {
                     />
                 </label>
                 <label>
-                    manaCoste:
+                    Coste maná convertido:
                     <input
                         type="text"
                         name="manaCost"
