@@ -81,7 +81,6 @@ const CardSearch = ({ selectCallback, actionCallback }) => {
                         onChange={handleInputChange}
                     />
                 </label>
-                {/* 
                 <label>
                     manaCoste:
                     <input
@@ -91,7 +90,7 @@ const CardSearch = ({ selectCallback, actionCallback }) => {
                         onChange={handleInputChange}
                     />
                 </label>
-                <label>
+                {/*                 <label>
                     Aditivo:
                     <input
                         type="checkbox"
@@ -99,7 +98,7 @@ const CardSearch = ({ selectCallback, actionCallback }) => {
                         checked={searchCriteria.additive}
                         onChange={handleCheckboxChange}
                     />
-                </label>
+                </label> */}
                 <label>
                     Colores:
                     <CheckboxGroup>
@@ -137,7 +136,7 @@ const CardSearch = ({ selectCallback, actionCallback }) => {
                             </label>
                         ))}
                     </CheckboxGroup>
-                </label> */}
+                </label>
             </SearchForm>
             {searchResult && searchResult.length > 0 && (
                 <ImageContainer>
